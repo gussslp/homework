@@ -1,7 +1,7 @@
-import sqlite3
 import sqlite3 
 import tkinter as tk
 from tkinter import *
+from tkinter import messagebox
 
 db = sqlite3.connect("sqlite.db")
 
@@ -27,6 +27,7 @@ def text():
     d = a[0]
     b = c.fetchall()
     text.insert(tk.END,b[d-1])
+    messagebox.showinfo("дані успішно записані")
 
 label = tk.Label(text="Hello world", bg="white", fg="red")
 label.pack()
